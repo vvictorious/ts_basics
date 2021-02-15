@@ -11,11 +11,14 @@ interface Props {
     person?: Person;
 }
 
+interface TextNode {
+    text: string;
+}
+
 const TextField: React.FC<Props> = ({text}) => {
 
-    const [count, setCount] = useState <number | null> (5)
+    const [count, setCount] = useState <TextNode> ({text: '5'})
 
-    setCount(null)
 
     return (
         <div>
