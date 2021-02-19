@@ -1,17 +1,13 @@
-import React, { useState } from 'react'
-import { JSXElement } from '@babel/types';
+import React from 'react'
 
 interface Props {
-    children: (count: number, setCount: React.Dispatch<React.SetStateAction<number>>) => JSX.Element | null
+    count: number;
 }
 
-const Counter: React.FC<Props> = ({children}) => {
-
-    const [count, setCount] = useState(0)
-
+const Counter: React.FC<Props> = ({count}) => {
     return (
         <div>
-            {children(count, setCount)}
+            <h2>{count}</h2>
         </div>
     )
 }
